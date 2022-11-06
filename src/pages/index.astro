@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="i’m christopher.">
+	<main class="max-w-2xl px-4 mx-auto md:px-8">
+		<header class="grid gap-4 md:items-center md:grid-cols-12 md:gap-8">
+			<div class="md:flex md:col-span-4 md:items-center">
+				<figure class="w-24 h-auto mx-auto overflow-hidden transition-all border rounded-full shadow-md md:w-full aspect-square border-slate-600 bg-slate-50 group hover:bg-slate-600 hover:animate-spin">
+					<img src="/img/portrait-illustration.png" alt="Portrait illustration of Christopher" class="object-cover w-full h-full transition-all invert-0 group-hover:invert" />
+				</figure>	
+			</div>
+			<div class="max-w-lg prose-sm md:col-span-8 md:max-w-none">
+				<h1>Hey there,<br>i’m christopher! <span class="relative inline-block hover:animate-bounce">👋</span></h1>
+				<p>
+					i’m a senior front-end web developer currently on sabbatical from professional work. i’m recovering from burnout and trying to figure out who i want to be now. i use they/them pronouns.
+				</p>		
+			</div>
+		</header>	
+		<ul role="list" class="grid max-w-lg grid-cols-2 gap-4 pl-0 mx-auto my-4 list-none md:max-w-lg not-prose md:grid-cols-2 md:gap-8 md:my-8">
+			<Card
+				href="https://woof.group/@furioursus"
+				title="Mastodon"
+				body="Follow me here; i’m trying to break away from the next one"
+			/>
+			<Card
+				href="https://twitter.com/@furioursus"
+				title="Twitter"
+				body="My former microblog of choice until Musk made it even worse"
+			/>
+			<Card
+				href="https://github.com/onebrightlight"
+				title="Github"
+				body="There’s bound to be some code in here, but a lot is private"
+			/>
+			<Card
+				href="https://flickr.com/onebrightlight"
+				title="Flickr"
+				body="i like taking photos. it’s enjoyable and rewarding"
+			/>
+		</ul>
+	</main>
+</Layout>

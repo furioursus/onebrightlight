@@ -1,0 +1,24 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="grid min-h-screen gap-4 pt-4 font-body md:pt-8 grid-rows-[1fr,auto]">
+		<slot />
+		<footer class="py-4 text-xs text-center bg-slate-700 text-slate-50">Why would i copyright this page? There’s nothing to see here yet.</footer>
+	</body>
+</html>

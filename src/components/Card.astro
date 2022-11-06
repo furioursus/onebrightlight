@@ -1,0 +1,23 @@
+---
+import Paperclip from './Paperclip.astro';
+
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<li class="p-4 transition-all duration-500 rounded-lg shadow-lg bg-slate-50 hover:shadow-sm hover:bg-slate-700 hover:text-slate-50">
+	<a href={href}>
+		<h2 class="flex justify-between mb-2 text-xl font-medium">
+			{title}
+			<Paperclip />
+		</h2>
+		<p class="leading-tight">
+			{body}
+		</p>
+	</a>
+</li>

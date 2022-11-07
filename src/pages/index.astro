@@ -12,10 +12,10 @@ import Card from '../components/Card.astro';
 				</figure>	
 			</div>
 			<div class="max-w-lg prose-sm md:col-span-8 md:max-w-none">
-				<h1>Hey there,<br>i’m christopher! <span class="relative inline-block hover:animate-bounce">👋</span></h1>
+				<h1>Hey there,<br>i’m christopher! <span class="relative inline-block cursor-default hover:animate-wiggle">👋</span></h1>
 				<p>
 					i’m a senior front-end web developer currently on sabbatical from professional work. i’m recovering from burnout and trying to figure out who i want to be now. i use they/them pronouns.
-				</p>		
+				</p>
 			</div>
 		</header>	
 		<ul role="list" class="grid max-w-lg grid-cols-2 gap-4 pl-0 mx-auto my-4 list-none md:max-w-lg not-prose md:grid-cols-2 md:gap-8 md:my-8">
@@ -23,21 +23,25 @@ import Card from '../components/Card.astro';
 				href="https://woof.group/@furioursus"
 				title="Mastodon"
 				body="Follow me here; i’m trying to break away from the next one"
+				hoverBgColor="hover:bg-[#6364FF]"
 			/>
 			<Card
 				href="https://twitter.com/@furioursus"
 				title="Twitter"
 				body="My former microblog of choice until Musk made it even worse"
+				hoverBgColor="hover:bg-[#1DA1F2]"
 			/>
 			<Card
 				href="https://github.com/onebrightlight"
 				title="Github"
 				body="There’s bound to be some code in here, but a lot is private"
+				hoverBgColor="hover:bg-[#181717]"
 			/>
 			<Card
 				href="https://flickr.com/onebrightlight"
 				title="Flickr"
 				body="i like taking photos. it’s enjoyable and rewarding"
+				hoverBgColor="hover:bg-[#0063DC]"
 			/>
 		</ul>
 	</main>

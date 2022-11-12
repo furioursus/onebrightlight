@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
 export interface Props {
 	title: string;
@@ -17,8 +19,9 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="grid min-h-screen gap-4 pt-4 font-body md:pt-8 grid-rows-[1fr,auto]">
+	<body class="grid min-h-screen gap-4 font-body grid-rows-[auto,1fr,auto]">
+		<Navigation />
 		<slot />
-		<footer class="py-4 text-xs text-center bg-slate-700 text-slate-50">Why would i copyright this page? There’s nothing to see here yet.</footer>
+		<Footer />
 	</body>
 </html>

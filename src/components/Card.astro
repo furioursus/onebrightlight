@@ -9,21 +9,23 @@ export interface Props {
 	hoverBgColor?: string;
 	body: string;
 	href: string;
+	rel?: string;
 }
 
 const {
-	href, 
-	title, 
-	body, 
+	title,
 	color = "text-slate-600",
 	hoverColor = "hover:text-slate-50",
 	bgColor = "bg-slate-50",
-	hoverBgColor = "hover:bg-slate-700"
-	} = Astro.props;
+	hoverBgColor = "hover:bg-slate-700",
+	body,
+	href,
+	rel = 'noopener noreferrer'
+} = Astro.props;
 ---
 
 <li class={`p-4 transition-all duration-500 rounded-lg shadow-lg hover:shadow-sm ${color} ${bgColor} ${hoverColor} ${hoverBgColor}`}>
-	<a href={href}>
+	<a href={href} rel={rel}>
 		<h2 class="flex justify-between mb-2 text-xl font-medium">
 			{title}
 			<Paperclip />

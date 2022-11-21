@@ -1,0 +1,42 @@
+---
+layout: ../../layouts/PostLayout.astro
+title: 'Dropdowns are a Nightmare'
+pubDate: 2022-11-14
+description: 'There are few things in this world that i hate more.'
+tags: ["dropdowns", "ux", "rants"]
+---
+import FigureImg from '@components/FigureImg.astro';
+import AmazonDropdown from './img/amazon-dropdown.png';
+import Awesomplete from './img/awesomplete-suggestion.png';
+
+I hate dropdowns. They’re largely unwieldy and *rarely* better suited than an input field assisted with some sort of text suggestion plugin like [Lea Verou](http://lea.verou.me/)’s amazing [Awesomplete](http://leaverou.github.io/awesomplete/). This video boggles the mind. How does someone add this many options and assume the visitor won’t get overwhelmed quickly?
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I refuse, refuse, refuse to believe that this drop-down actually exists. <a href="https://t.co/LmkLMcDnmM">https://t.co/LmkLMcDnmM</a> via <a href="https://twitter.com/ericlcampbell?ref_src=twsrc%5Etfw">@ericlcampbell</a> <a href="https://twitter.com/goldenkrishna?ref_src=twsrc%5Etfw">@goldenkrishna</a> <a href="https://t.co/NzNViE4fEk">pic.twitter.com/NzNViE4fEk</a></p>&mdash; Smashing Magazine 🇺🇦 🏳️‍🌈 (@smashingmag) <a href="https://twitter.com/smashingmag/status/887240314137849856?ref_src=twsrc%5Etfw">July 18, 2017</a></blockquote> <script client: async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I understand that in *this* example, it’s meant to be an amusing and funny extra. The problem it highlights though is one of usability.
+
+From the start of the registration process on this company site, we’re met with a number of items to choose from. Yes, we have the common entries up top, and everything after is just for laughs, but already, the visitor is tired. I’m tired just from looking at it and I’m just watching a video of it!
+
+## Don’t make me think! No, seriously.
+
+If you exhaust the visitor (even in jest) at the beginning, your chance of conversion is going to go down fast. Cognitive load goes up, especially when a list of choices are presented seriously.
+
+<FigureImg src={AmazonDropdown} alt="Amazon's dropdown menu" caption="A dropdown menu from amazon.com showing countless countries to scroll through." />
+
+Like this country list example, scrolling through dozens to even hundreds of choices can exhaust the visitor. Making me scroll through all of this without assistance is terribly inefficient and tiring. Organizing dropdown items alphabetically makes it easier for someone who knows they can key in letters to try to find a match (I always hit `uni` to at least get me to United Arab Emirates), but the average visitor doesn’t know or use these keyboard shortcuts.
+
+## Making it work
+
+As I mentioned earlier, JavaScript helpers can aid us immensely in offloading this overwhelming feeling. [Awesomplete](http://leaverou.github.io/awesomplete/) goes a long way into fixing this headache, but there’s a number of other plugins out there. The beauty of these tools becomes apparent when you see how easily we can assist visitors even when they only know how to spell or remember part of a word:
+
+<FigureImg src={Awesomplete} alt="A more realized suggestion as you type dropdown from Awesomplete." caption="A more realized suggestion as you type dropdown from Awesomplete." />
+
+Suddenly, by adding suggestions to our input, the visitor is aided without feeling overwhelmed by a possibly vast list of values that they won’t ever have any intention of choosing. And if JavaScript isn’t enabled for one reason or another? We can always fallback to a `select` or `datalist` element.
+
+If you have numerous options in a drop down, I’d encourage you to start using a similar tool on your site.
+
+Obviously, there are examples where a simple select element suffice. There are plenty of uses when a short drop down would present a relatively quick scan for the visitor, but once they start scrolling to find the right option, it becomes more and more difficult for them to process and to ultimately achieve what you are trying to get them to do on your site.
+
+## Summing Up
+
+Helping the visitor wade through a large number of options is a relatively simple process, and one that provides plenty of benefits for the site owner.

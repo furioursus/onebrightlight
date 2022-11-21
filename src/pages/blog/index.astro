@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+const allPosts = await Astro.glob('./*.{md,mdx}');
+---
+
+<Layout title="i’m christopher.">
+	<PageHeader>Blog</PageHeader>
+	<ul role="list" class="list-none space-y-4 md:space-y-8">
+		{allPosts.map(
+			(post) => 
+				<li>
+					<h2 class="text-3xl font-medium">
+						<a href={post.url}>{post.frontmatter.title}</a>
+					</h2>
+					<p>{post.frontmatter.description}</p>
+				</li>
+		)}
+	</ul>
+</Layout>

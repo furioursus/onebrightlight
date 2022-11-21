@@ -2,10 +2,15 @@
 import NavigationLink from "./NavigationLink.astro";
 ---
 
-<div class="bg-slate-500 text-white">
-	<nav class="max-w-5xl mx-auto text-center flex items-center py-1 md:py-2 px-4 md:px-8">
-		<a href="/" class="inline-block bg-slate-50 h-8 w-8 rounded-full overflow-hidden border border-slate-700">
-			<img class="object-cover h-full w-full translate-y-3 scale-[3]" src="/img/portrait-illustration.png" />
-		</a>
+<div class="border-t-8 border-t-slate-800">
+	<nav class="max-w-5xl mx-auto text-center flex justify-between items-center py-1 md:py-2 px-4 md:px-8">
+		<div class="flex items-center space-x-4  mx-auto">
+			<a href="/" title="Home" class="inline-block bg-slate-50 h-8 w-8 rounded-full overflow-hidden border border-slate-700">
+				<img height="96" width="96" class="object-cover h-full w-full translate-y-3 scale-[3]" src="/img/portrait-illustration.png" />
+			</a>
+			<!-- <NavigationLink href="/about" title="About" /> -->
+			<NavigationLink href="/blog" title="Blog" />
+			<!-- <NavigationLink href="/contact" title="Contact" /> -->
+		</div>
 	</nav>
 </div>

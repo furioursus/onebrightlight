@@ -1,0 +1,26 @@
+---
+import { Picture } from '@astrojs/image/components';
+export interface Props {
+	src: string;
+	alt: string;
+	caption?: string;
+}
+
+const {
+	src,
+	alt,
+	caption = null,
+} = Astro.props;
+---
+
+<figure class="not-prose">
+	<Picture
+		class="rounded-lg shadow-md"
+		src={src}
+		widths={[400, 800, 1200, 1800]}
+		sizes="(max-width: 800px) 95vw, 90vw"
+		formats={["webp"]}
+		alt={alt}
+	/>
+	{caption && <figcaption class="text-sm italic mt-2">{caption}</figcaption>}
+</figure>
